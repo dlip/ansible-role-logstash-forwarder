@@ -1,4 +1,5 @@
 ---
+logstash_forwarder_args: --config /etc/logstash-forwarder -spool-size 100 -log-to-syslog
 logstash_forwarder_logstash_server: localhost
 logstash_forwarder_logstash_server_port: 5000
 

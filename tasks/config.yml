@@ -1,5 +1,12 @@
 ---
 
+- name: Create logstash-forwarder daemon configuration file.
+  template:
+    src: logstash-forwarder-daemon.j2
+    dest: /etc/sysconfig/logstash-forwarder
+    mode: 0644
+  notify: restart logstash-forwarder
+
 - name: Create logstash-forwarder configuration file.
   template:
     src: logstash-forwarder.j2
