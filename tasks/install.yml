@@ -1,0 +1,15 @@
+---
+- include: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
+- include: setup-Debian.yml
+  when: ansible_os_family == 'Debian'
+
+# See: http://goo.gl/cz9Lnd
+# - name: Install logstash-forwarder init script.
+#   get_url:
+#     url: https://raw.github.com/elasticsearch/logstash-forwarder/master/logstash-forwarder.init
+#     dest: /etc/init.d/logstash-forwarder
+#     force: yes
+#     mode: 0655
+
